@@ -7,8 +7,6 @@
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- html2pdf library for PDF download -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         * {
             margin: 0;
@@ -94,38 +92,6 @@
             margin-bottom: 20px;
         }
 
-        .download-btn-container {
-            text-align: center;
-            margin: 30px 20px;
-        }
-
-        .btn-pdf {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 10px 20px rgba(59,130,246,0.2);
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .btn-pdf:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(59,130,246,0.3);
-        }
-
-        .btn-pdf i {
-            font-size: 1.1rem;
-        }
-
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -175,8 +141,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border: 1px solid #e2e8f0;
             transition: all 0.3s;
-            break-inside: avoid; /* Prevents cards from breaking across PDF pages */
-            page-break-inside: avoid;
         }
 
         .card:hover {
@@ -227,8 +191,6 @@
             padding: 30px 25px;
             margin: 20px 0;
             box-shadow: 0 10px 30px rgba(16,185,129,0.1);
-            break-inside: avoid;
-            page-break-inside: avoid;
         }
 
         .esg-option-card h3 {
@@ -300,8 +262,6 @@
             padding: 25px;
             border-left: 6px solid;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            break-inside: avoid;
-            page-break-inside: avoid;
         }
 
         .scenario-card.supercharged { border-color: #10b981; }
@@ -341,8 +301,6 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border: 1px solid #e2e8f0;
-            break-inside: avoid;
-            page-break-inside: avoid;
         }
 
         .stat-number {
@@ -408,8 +366,6 @@
             padding: 25px;
             border-top: 4px solid #3b82f6;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            break-inside: avoid;
-            page-break-inside: avoid;
         }
 
         .sector-card h4 {
@@ -437,52 +393,12 @@
             padding: 15px;
             border-radius: 12px;
             border-left: 4px solid #10b981;
-            break-inside: avoid;
-            page-break-inside: avoid;
         }
 
         .nature-item h5 {
             font-weight: 700;
             color: #0f172a;
             margin-bottom: 5px;
-        }
-
-        /* PDF Optimizations */
-        @media print {
-            .btn-pdf, .download-btn-container, .footer {
-                display: none;
-            }
-            
-            .header {
-                background: #0f172a;
-                color: white;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            .card, .stat-box, .sector-card, .scenario-card, .esg-option-card, .nature-item {
-                break-inside: avoid;
-                page-break-inside: avoid;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            table {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            th {
-                background: #0f172a;
-                color: white;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            
-            body {
-                background: white;
-                padding: 0.5in;
-            }
         }
 
         /* Footer */
@@ -535,17 +451,12 @@
         <span class="badge"><i class="fas fa-chart-line" style="margin-right: 8px;"></i> Global Economic & Workforce Analysis</span>
     </div>
 
-    <!-- Executive Summary (Original) -->
+    <!-- Executive Summary -->
     <div class="executive-summary" id="executive-summary">
         <h2><i class="fas fa-file-alt"></i> Executive Summary</h2>
         <p>The world of work is undergoing its most significant transformation since the Industrial Revolution. By 2030, nearly <strong>40% of the global workforce will require significant upskilling</strong>, with <strong>63% of employers already identifying skills gaps as their top barrier to business transformation</strong> according to the World Economic Forum. Yet this disruption brings enormous opportunity. The World Economic Forum estimates that <strong>78 million new jobs will be created globally by 2030</strong>, while Frost & Sullivan identifies <strong>50 transformative technologies poised to unlock a $1.25–$1.35 trillion market opportunity</strong>.</p>
         <p>This guide synthesizes the latest economic forecasts, technology trends, and labor market data to provide you with actionable intelligence—whether you're a student planning your career path, a professional seeking to upskill, or an entrepreneur looking for the next opportunity.</p>
         <p><strong>Key themes driving 2026-2030:</strong> Agentic AI integration, the green economy transition, healthcare innovation, demographic shifts, and the rise of human-AI collaboration as the new competitive advantage.</p>
-    </div>
-
-    <!-- Download PDF Button -->
-    <div class="download-btn-container">
-        <button class="btn-pdf" id="downloadPDF"><i class="fas fa-file-pdf"></i> Download Full Report (PDF)</button>
     </div>
 
     <div class="container" id="report-content">
@@ -1009,52 +920,5 @@
         <p style="margin-top: 10px;">Data synthesized from leading financial, academic, and multilateral sources</p>
         <p>Updated March 2026 • For educational and strategic planning purposes</p>
     </div>
-
-    <script>
-        document.getElementById('downloadPDF').addEventListener('click', function () {
-            const element = document.getElementById('report-content');
-            const execSum = document.getElementById('executive-summary');
-            
-            // Create a container for PDF with better structure
-            const wrapper = document.createElement('div');
-            wrapper.style.padding = '20px';
-            wrapper.style.maxWidth = '1200px';
-            wrapper.style.margin = '0 auto';
-            wrapper.style.backgroundColor = '#ffffff';
-            
-            // Clone and add executive summary
-            const cloneExec = execSum.cloneNode(true);
-            cloneExec.style.margin = '20px';
-            wrapper.appendChild(cloneExec);
-            
-            // Clone and add report content
-            const cloneContent = element.cloneNode(true);
-            cloneContent.style.padding = '20px';
-            wrapper.appendChild(cloneContent);
-            
-            // Optimized PDF settings for better alignment
-            const opt = {
-                margin:        [0.75, 0.75, 0.75, 0.75], // Increased margins
-                filename:      'Future_of_Work_Guide_2026-2030.pdf',
-                image:         { type: 'jpeg', quality: 0.95 },
-                html2canvas:   { 
-                    scale: 1.5, // Reduced scale for better rendering
-                    letterRendering: true,
-                    useCORS: true,
-                    logging: false
-                },
-                jsPDF: { 
-                    unit: 'in', 
-                    format: 'a4', 
-                    orientation: 'portrait',
-                    compress: true
-                },
-                pagebreak: { mode: ['css', 'legacy'] } // Better page break handling
-            };
-            
-            // Generate PDF
-            html2pdf().set(opt).from(wrapper).save();
-        });
-    </script>
 </body>
 </html>
